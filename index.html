@@ -6,19 +6,53 @@
     <link rel="stylesheet" type="text/css" href="style.css"><link/>
 </head>
 <body>
-<script src="jquery-3.2.1.min.js"></script>
-<script src="script.js"></script>
 
 <div class="main">
     <h2>Todays Weather</h2>
     <div class="summary"></div>
     <span class="location"></span>
     <span class="temperature"></span>
-    <div class="icon"></div>
+    <div class="icon">
+        <figure class="icons">
+            <canvas id="clear-day" width="64" height="64">
+            </canvas>
+
+            <canvas id="clear-night" width="64" height="64">
+            </canvas>
+
+            <canvas id="partly-cloudy-day" width="64" height="64">
+            </canvas>
+
+            <canvas id="partly-cloudy-night" width="64" height="64">
+            </canvas>
+
+            <canvas id="cloudy" width="64" height="64">
+            </canvas>
+
+            <canvas id="rain" width="64" height="64">
+            </canvas>
+
+            <canvas id="sleet" width="64" height="64">
+            </canvas>
+
+            <canvas id="snow" width="64" height="64">
+            </canvas>
+
+            <canvas id="wind" width="64" height="64">
+            </canvas>
+
+            <canvas id="fog" width="64" height="64">
+            </canvas>
+        </figure>
+    </div>
     <button type="button" class="btn-toggle"></button>
 </div>
 <div class="footer">
 
 </div>
+<script src="skycons.js"></script>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
