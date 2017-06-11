@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+    // render all skycons
+    var icons = new Skycons(),
+        list  = [
+            "clear-day", "clear-night", "partly-cloudy-day",
+            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+            "fog"
+        ],
+        i;
+    for(i = list.length; i--; )
+        icons.set(list[i], list[i]);
+    icons.play();
+
+    $(".icons canvas").hide()
+
     /* get location */
     $.getJSON("http://freegeoip.net/json/", function(locationData) {
 
@@ -24,8 +38,7 @@ $(document).ready(function() {
                 $("<span>" + locationData.country_code + "</span>").appendTo('.location');
 
 
-                $(".icons canvas").hide()
-                $("#" + weatherData.currently.icon).show()
+                $("canvas#" + weatherData.currently.icon).show()
             },
             xhrFields: {
                 withCredentials: false
@@ -34,16 +47,4 @@ $(document).ready(function() {
 
     });
 
-    var icons = new Skycons(),
-        list  = [
-            "clear-day", "clear-night", "partly-cloudy-day",
-            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-            "fog"
-        ],
-        i;
-    for(i = list.length; i--; )
-        icons.set(list[i], list[i]);
-    icons.play();
-
-    $(".icons canvas").hide()
 });
