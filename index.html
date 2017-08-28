@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <title>Weather App</title>
     <link rel="stylesheet" type="text/css" href="style.css"><link/>
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 </head>
 <body>
+
+
 
 <div class="main">
     <span class="location"></span>
     <p>Todays weather is</p>
-    <div class="summary"></div>
-    <span class="fahrenheit"></span>
-    <span class="celsius"></span>
-    <div class="icon">
-        <figure class="icons">
+     <figure class="icons">
             <canvas id="clear-day" width="64" height="64">
             </canvas>
 
@@ -45,8 +44,29 @@
             <canvas id="fog" width="64" height="64">
             </canvas>
         </figure>
+    <div class="summary"></div>
+    <span class="fahrenheit"></span>
+    <span class="celsius"></span>
+    <div class="icon">
+       
     </div>
-    <button type="button" class="btn-toggle">Convert temp</button>
+    <div class="container">
+  <div class="switch">
+    <div class="switch-back"></div>
+
+    <input type="radio" class="switch-input" name="switch" value="off" id="off" checked>
+    <label for="off" class="switch-label-left switch-label-off"><span>Off</span></label>
+    <div class="label-off"><div>F</div></div>
+    
+    <input type="radio" class="switch-input" name="switch" value="on" id="on">
+    <label for="on" class="switch-label-right switch-label-on"><span>On</span></label>
+    <div class="label-on"><div>C</div></div>
+
+    <span class="switch-selection"></span>
+  </div>
+</div>
+    
+   
 </div>
 <div class="footer">
 

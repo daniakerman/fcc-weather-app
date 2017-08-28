@@ -59,7 +59,7 @@ $(document).ready(function () {
 
     /* click event listener */
     $(".fahrenheit").hide();
-    $(".btn-toggle").click(function () {
+    $(".switch-input").click(function () {
         $(".fahrenheit").toggle();
         $(".celsius").toggle();
     });
