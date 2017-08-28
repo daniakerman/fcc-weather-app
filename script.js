@@ -16,7 +16,7 @@ $(document).ready(function () {
     $(".icons canvas").hide();
 
     /* get location */
-    $.getJSON("http://freegeoip.net/json/", function (locationData) {
+    $.getJSON("https://freegeoip.net/json/", function (locationData) {
 
         var latitude = locationData.latitude;
         var longitude = locationData.longitude;
